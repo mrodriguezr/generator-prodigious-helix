@@ -117,10 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <!-- <Content Include="Global.asax" /> -->
-    <!-- <Content Include="scripts\ai.0.22.9-build00167.js" /> -->
-    <!-- <Content Include="scripts\ai.0.22.9-build00167.min.js" /> -->
-    <Content Include="Web.config" />
+    <!--<Content Include="Web.config" />-->
   </ItemGroup>
   <ItemGroup>
     <!-- <Compile Include="App_Start\RouteConfig.cs" /> -->
@@ -131,17 +128,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />	
   </ItemGroup>
   <ItemGroup>
-    <!-- <Content Include="Views\web.config" /> -->
     <Content Include="packages.config" />
     <!-- <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content> -->
-    <None Include="Web.Debug.config">
+    <!--<None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
-    </None>
+    </None>-->
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

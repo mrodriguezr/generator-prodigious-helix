@@ -27,9 +27,15 @@ module.exports = generators.Base.extend({
             type: 'input',
             name: 'foundationTitle',
             message: 'Enter the name of your Foundation module:'
+        }, {
+            type: 'confirm',
+            name: 'createTdsProject',
+            message: 'Create TDS project?:',
+            default: true
         }]).then(function(answers) {
             this.props = answers;
             this.props.projectGuid = '{' + guid.v4() + '}';
+            this.props.tdsGuid = guid.v4();
         }.bind(this));
     },
     writing: function() {
@@ -49,24 +55,39 @@ module.exports = generators.Base.extend({
             this.props
         );
 
-        // // AssemblyInfo.cs, project
+        // AssemblyInfo.cs, project
         this.fs.copyTpl(
             this.templatePath('AssemblyInfo.cs'),
             this.destinationPath(path.join(targetPath, 'code', 'Properties', 'AssemblyInfo.cs')), { assemblyName: this.props.solutionName + '.Foundation.' + this.props.foundationTitle }
         );
 
-        // // Publish Profile configuration
+        // Publish Profile configuration
         this.fs.copyTpl(
             this.templatePath('Local.pubxml'),
             this.destinationPath(path.join(targetPath, 'code', 'Properties/PublishProfiles', 'Local.pubxml')), { assemblyName: this.props.solutionName + '.Foundation.' + this.props.foundationTitle }
         );
 
-        // // config
+        // config
         this.fs.copyTpl(
             this.templatePath('Foundation.config'),
             this.destinationPath(path.join(targetPath, 'code', 'App_Config', 'Include', 'Foundation', 'Foundation.' + this.props.foundationTitle + '.config')),
             this.props
         );
+
+        // TDS Project
+        if (this.props.createTdsProject) {
+            this.fs.copy(
+                this.templatePath('tds/**/*'),
+                this.destinationPath(path.join(targetPath, 'tds'))
+            );
+
+            // tds csproj
+            this.fs.copyTpl(
+                this.templatePath('Tds.Master.scproj'),
+                this.destinationPath(path.join(targetPath, 'tds', this.props.solutionName + '.Foundation.' + this.props.foundationTitle + '.Master.scproj')),
+                this.props
+            );
+        }
     },
     end: function() {
         console.log('');

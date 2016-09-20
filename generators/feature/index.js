@@ -27,9 +27,15 @@ module.exports = generators.Base.extend({
             type: 'input',
             name: 'featureTitle',
             message: 'Enter the name of your Feature module:'
+        }, {
+            type: 'confirm',
+            name: 'createTdsProject',
+            message: 'Create TDS project?:',
+            default: true
         }]).then(function(answers) {
             this.props = answers;
             this.props.projectGuid = '{' + guid.v4() + '}';
+            this.props.tdsGuid = guid.v4();
         }.bind(this));
     },
     writing: function() {
@@ -49,30 +55,39 @@ module.exports = generators.Base.extend({
             this.props
         );
 
-        // // AssemblyInfo.cs, project
+        // AssemblyInfo.cs, project
         this.fs.copyTpl(
             this.templatePath('AssemblyInfo.cs'),
             this.destinationPath(path.join(targetPath, 'code', 'Properties', 'AssemblyInfo.cs')), { assemblyName: this.props.solutionName + '.Feature.' + this.props.featureTitle }
         );
 
-        // // Publish Profile configuration
+        // Publish Profile configuration
         this.fs.copyTpl(
             this.templatePath('Local.pubxml'),
             this.destinationPath(path.join(targetPath, 'code', 'Properties/PublishProfiles', 'Local.pubxml')), { assemblyName: this.props.solutionName + '.Foundation.' + this.props.featureTitle }
         );
 
-        // // config
+        // config
         this.fs.copyTpl(
             this.templatePath('Feature.config'),
             this.destinationPath(path.join(targetPath, 'code', 'App_Config', 'Include', 'Feature', 'Feature.' + this.props.featureTitle + '.config')),
             this.props
         );
 
-        // tds
-        this.fs.copy(
-            this.templatePath('tds/**/*'),
-            this.destinationPath(path.join(targetPath, 'tds'))
-        );
+        // TDS Project
+        if (this.props.createTdsProject) {
+            this.fs.copy(
+                this.templatePath('tds/**/*'),
+                this.destinationPath(path.join(targetPath, 'tds'))
+            );
+
+            // tds csproj
+            this.fs.copyTpl(
+                this.templatePath('Tds.Master.scproj'),
+                this.destinationPath(path.join(targetPath, 'tds', this.props.solutionName + '.Feature.' + this.props.featureTitle + '.Master.scproj')),
+                this.props
+            );
+        }
     },
     end: function() {
         console.log('');
@@ -80,6 +95,9 @@ module.exports = generators.Base.extend({
         console.log('Your Feature module ' + chalk.red.bold(this.props.featureTitle) + ' has been created');
         console.log('');
         console.log('You will need to add your Feature project(s) to your Visual Studio solution.');
+        if (this.props.createTdsProject) {
+            console.log('You will need to add your TDS project(s) to your Visual Studio solution.');
+        }
         console.log('Then build and publish the Feature project from Visual Studio.');
         console.log('');
     }
