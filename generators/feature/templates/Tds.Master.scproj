@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>  
     <ProjectGuid><%= tdsGuid %></ProjectGuid>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <SourceWebPhysicalPath>..\code</SourceWebPhysicalPath>    
+    <SourceWebPhysicalPath>..\..\code</SourceWebPhysicalPath>    
     <SourceWebProject><%= projectGuid %>|src\Feature\<%= featureTitle %>\code\<%= solutionName %>.Feature.<%= featureTitle %>.csproj</SourceWebProject>
     <SourceWebVirtualPath>/<%= solutionName %>.Feature.<%= featureTitle %>.csproj</SourceWebVirtualPath>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>

@@ -70,7 +70,7 @@ module.exports = generators.Base.extend({
         // config
         this.fs.copyTpl(
             this.templatePath('Foundation.config'),
-            this.destinationPath(path.join(targetPath, 'code', 'App_Config', 'Include', 'Foundation', 'Foundation.' + this.props.foundationTitle + '.config')),
+            this.destinationPath(path.join(targetPath, 'code', 'App_Config', 'Include/' + this.props.solutionName, 'Foundation', 'Foundation.' + this.props.foundationTitle + '.config')),
             this.props
         );
 
@@ -84,7 +84,10 @@ module.exports = generators.Base.extend({
             // tds csproj
             this.fs.copyTpl(
                 this.templatePath('Tds.Master.scproj'),
-                this.destinationPath(path.join(targetPath, 'tds', this.props.solutionName + '.Foundation.' + this.props.foundationTitle + '.Master.scproj')),
+                this.destinationPath(path.join(targetPath,
+                    'tds',
+                    this.props.solutionName + '.Foundation.' + this.props.foundationTitle + '.Master',
+                    this.props.solutionName + '.Foundation.' + this.props.foundationTitle + '.Master.scproj')),
                 this.props
             );
         }

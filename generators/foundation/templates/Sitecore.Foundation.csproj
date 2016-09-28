@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace><%= solutionName %>.Foundation.<%= foundationTitle %></RootNamespace>
     <AssemblyName><%= solutionName %>.Foundation.<%= foundationTitle %></AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -119,18 +119,12 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <!-- <Compile Include="App_Start\RouteConfig.cs" /> -->
-    <!-- <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile> -->	
+    <Content Include="App_Config\Include\<%= solutionName %>\Foundation\Foundation.<%= foundationTitle %>.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Compile Include="Properties\AssemblyInfo.cs" />	
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <!-- <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content> --> 
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
