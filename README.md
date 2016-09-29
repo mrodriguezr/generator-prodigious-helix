@@ -10,6 +10,15 @@ npm install -g yo
 npm install -g generator-prodigious-helix
 ```
 
+## What is it?
+The purpose of prodigious-helix is to reduce the time when creating Sitecore projects following [Helix] guidelines
+
+## Project
+Execute the following command in an empty folder
+```bash
+yo prodigious-helix
+```
+It will create the initial scaffolding to start Sitecore-ing following Helix
 
 ## Adding Features
 
@@ -60,5 +69,5 @@ This generator is based on [kamsar] yeoman [habitat generator] but this implemen
 
 [kamsar]: https://twitter.com/kamsar
 [habitat generator]: https://github.com/kamsar/generator-habitat/
-
+[Helix]: http://helix.sitecore.net/
 
