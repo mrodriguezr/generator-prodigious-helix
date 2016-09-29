@@ -8,18 +8,18 @@
     <ProjectGuid><%= tdsGuid %></ProjectGuid>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <SourceWebPhysicalPath>..\..\code</SourceWebPhysicalPath>    
-    <SourceWebProject><%= projectGuid %>|src\Feature\<%= featureTitle %>\code\<%= solutionName %>.Feature.<%= featureTitle %>.csproj</SourceWebProject>
-    <SourceWebVirtualPath>/<%= solutionName %>.Feature.<%= featureTitle %>.csproj</SourceWebVirtualPath>
+    <SourceWebProject><%= projectGuid %>|src\Project\<%= solutionName %>\code\<%= solutionName %>.Website.csproj</SourceWebProject>
+    <SourceWebVirtualPath>/<%= solutionName %>.Website.csproj</SourceWebVirtualPath>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <EnableUpdateable>true</EnableUpdateable>
     <UseMerge>true</UseMerge>
-    <SingleAssemblyName><%= solutionName %>.Feature.<%= featureTitle %>.Master</SingleAssemblyName>
+    <SingleAssemblyName><%= solutionName %>.Website.Master</SingleAssemblyName>
     <UseWebConfigReplacement>false</UseWebConfigReplacement>
     <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
     <LegacyFileReplacement>false</LegacyFileReplacement>
-    <AssemblyName><%= solutionName %>.Feature.<%= featureTitle %>.Master</AssemblyName>
-    <Name><%= solutionName %>.Feature.<%= featureTitle %>.Master</Name>
-    <RootNamespace><%= solutionName %>.Feature.<%= featureTitle %>.Master</RootNamespace>
+    <AssemblyName><%= solutionName %>.Website.Master</AssemblyName>
+    <Name><%= solutionName %>.Website.Master</Name>
+    <RootNamespace><%= solutionName %>.Website.Master</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

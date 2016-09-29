@@ -42,8 +42,6 @@ module.exports = generators.Base.extend({
     writing: function() {
         var rootPath = path.join('');
         var codePath = path.join('src', 'Project', this.props.solutionName);
-        console.log('Root Path: ' + rootPath);
-        console.log('Code Path: ' + codePath);
 
         // Create empty folders
         mkdirp.sync('lib/Sitecore');
@@ -131,7 +129,8 @@ module.exports = generators.Base.extend({
                 projectFolder: this.props.projectFolder,
                 solutionFolder: this.props.solutionFolder,
                 solutionName: this.props.solutionName,
-                projectGuid: this.props.projectGuid
+                projectGuid: this.props.projectGuid,
+                tdsGuid: this.props.tdsGuid
             }
         );
 
@@ -157,14 +156,14 @@ module.exports = generators.Base.extend({
             );
 
             // tds csproj
-            // this.fs.copyTpl(
-            //     this.templatePath('Tds.Master.scproj'),
-            //     this.destinationPath(path.join(codePath,
-            //         'tds',
-            //         this.props.solutionName + '.Feature.' + this.props.featureTitle + '.Master',
-            //         this.props.solutionName + '.Feature.' + this.props.featureTitle + '.Master.scproj')),
-            //     this.props
-            // );
+            this.fs.copyTpl(
+                this.templatePath('Tds.Master.scproj'),
+                this.destinationPath(path.join(codePath,
+                    'tds',
+                    this.props.solutionName + '.Website.Master',
+                    this.props.solutionName + '.Website.Master.scproj')),
+                this.props
+            );
         }
     },
     end: function() {

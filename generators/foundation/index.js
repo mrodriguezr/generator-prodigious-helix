@@ -21,8 +21,7 @@ module.exports = generators.Base.extend({
         return this.prompt([{
             type: 'input',
             name: 'solutionName',
-            message: 'Enter the name of your Solution:',
-            default: 'Sitecore'
+            message: 'Enter the name of your Solution:'
         }, {
             type: 'input',
             name: 'foundationTitle',

@@ -117,7 +117,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <!--<Content Include="App_Config\Include\<%= solutionName %>\Feature\Feature.config" />     -->
+    <Content Include="App_Config\Include\<%= solutionName %>\<%= solutionName %>.Website.config" />
+    <Content Include="App_Config\Include\<%= solutionName %>\z.<%= solutionName %>.DevSettings.config" />     
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Compile Include="Properties\AssemblyInfo.cs" />	
   </ItemGroup>
