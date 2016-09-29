@@ -30,7 +30,7 @@ module.exports = generators.Base.extend({
         }, {
             type: 'confirm',
             name: 'createTdsProject',
-            message: 'Create TDS project?:',
+            message: 'Create TDS Master project?:',
             default: true
         }]).then(function(answers) {
             this.props = answers;
