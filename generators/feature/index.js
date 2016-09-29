@@ -64,7 +64,7 @@ module.exports = generators.Base.extend({
         // Publish Profile configuration
         this.fs.copyTpl(
             this.templatePath('Local.pubxml'),
-            this.destinationPath(path.join(targetPath, 'code', 'Properties/PublishProfiles', 'Local.pubxml')), { assemblyName: this.props.solutionName + '.Foundation.' + this.props.featureTitle }
+            this.destinationPath(path.join(targetPath, 'code', 'Properties/PublishProfiles', 'Local.pubxml')), { assemblyName: this.props.solutionName + '.Feature.' + this.props.featureTitle }
         );
 
         // config
