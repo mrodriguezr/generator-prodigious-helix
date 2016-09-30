@@ -62,7 +62,8 @@ Yeoman will ask you the information of the existing project (Solution Name, Foun
 
 This generator is based on [kamsar] yeoman [habitat generator] but this implementation is not tied to habitat project and has some extra features such as:
 
-* Allows to create TDS projects . 
+* Allows to create new Sitecore projects following [Helix] guidelines from scratch.
+* Allows to create TDS projects. 
 * Allows dynamic solution names.
 * Allows to select different .NET Frameworks .  
 
