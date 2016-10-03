@@ -1,14 +1,14 @@
 {
     "name": "generator-prodigious-helix",
     "version": "1.0.7",
-    "description": "VS projects generator",
+    "description": "Sitecore Helix generator",
     "files": [
-        "generators/app",
-        "generators/feature",
-        "generators/foundation"
+        "generators"
     ],
     "main": "generators\\index.js",
     "keywords": [
+        "sitecore",
+        "tds",
         "yeoman-generator"
     ],
     "author": "melvin.rodriguez@prodigious.com",
