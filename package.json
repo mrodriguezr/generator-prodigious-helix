@@ -1,8 +1,9 @@
 {
     "name": "generator-prodigious-helix",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "VS projects generator",
     "files": [
+        "generators/app",
         "generators/feature",
         "generators/foundation"
     ],
