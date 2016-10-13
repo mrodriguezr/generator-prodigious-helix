@@ -1,0 +1,83 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Work\\Yeoman\\generator-prodigious-helix',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\mrodrigu23\AppData\Roaming\npm-cache\generator-prodigious-helix\1.0.8\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\mrodrigu23\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 verbose tar pack [ 'C:\\Users\\mrodrigu23\\AppData\\Roaming\\npm-cache\\generator-prodigious-helix\\1.0.8\\package.tgz',
+10 verbose tar pack   'C:\\Work\\Yeoman\\generator-prodigious-helix' ]
+11 verbose tarball C:\Users\mrodrigu23\AppData\Roaming\npm-cache\generator-prodigious-helix\1.0.8\package.tgz
+12 verbose folder C:\Work\Yeoman\generator-prodigious-helix
+13 info prepublish generator-prodigious-helix@1.0.8
+14 verbose addLocalTarball adding from inside cache C:\Users\mrodrigu23\AppData\Roaming\npm-cache\generator-prodigious-helix\1.0.8\package.tgz
+15 verbose correctMkdir C:\Users\mrodrigu23\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+16 silly cache afterAdd generator-prodigious-helix@1.0.8
+17 verbose afterAdd C:\Users\mrodrigu23\AppData\Roaming\npm-cache\generator-prodigious-helix\1.0.8\package\package.json not in flight; writing
+18 verbose correctMkdir C:\Users\mrodrigu23\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+19 verbose afterAdd C:\Users\mrodrigu23\AppData\Roaming\npm-cache\generator-prodigious-helix\1.0.8\package\package.json written
+20 silly publish { name: 'generator-prodigious-helix',
+20 silly publish   version: '1.0.8',
+20 silly publish   description: 'Sitecore Helix generator',
+20 silly publish   files: [ 'generators' ],
+20 silly publish   main: 'generators\\index.js',
+20 silly publish   keywords: [ 'sitecore', 'tds', 'yeoman-generator' ],
+20 silly publish   author: { name: 'mrodriguezr66@gmail.com' },
+20 silly publish   dependencies:
+20 silly publish    { chalk: '^1.1.3',
+20 silly publish      mkdirp: '^0.5.1',
+20 silly publish      'node-uuid': '^1.4.7',
+20 silly publish      'yeoman-generator': '^0.24.1',
+20 silly publish      yosay: '^1.2.0' },
+20 silly publish   readme: '# generator-prodigious-helix\r\n> Yeoman generator for Sitecore Projects \r\n\r\n## Installation\r\n\r\nFirst, install [Yeoman](http://yeoman.io) and generator-prodigious-helix using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).\r\n\r\n```bash\r\nnpm install -g yo\r\nnpm install -g generator-prodigious-helix\r\n```\r\n\r\n## What is it?\r\nThe purpose of prodigious-helix is to reduce the time when creating Sitecore projects following [Helix] guidelines\r\n\r\n## Project\r\nExecute the following command in an empty folder\r\n```bash\r\nyo prodigious-helix\r\n```\r\nIt will create the initial scaffolding to start Sitecore-ing following Helix\r\n\r\n## Adding Features\r\n\r\nExecute in the root of your existing Sitecore source code:\r\n\r\n```bash\r\nyo prodigious-helix:feature\r\n```\r\n...then configure your project based on yeoman questions.\r\n\r\n\r\n## Adding TDS projects to existing Features\r\n\r\nExecute in the root of your existing Sitecore source code:\r\n\r\n```bash\r\nyo prodigious-helix:feature-tds\r\n```\r\nYeoman will ask you the information of the existing project (Solution Name, Feature Name), Sitecore database and the new TDS project alias/name you want to use. The new TDS project will be named like: ```SolutionName.Feature.FeatureName.Alias ```\r\n\r\n## Adding Foundation Modules\r\n\r\nExecute in the root of your existing Sitecore source code:\r\n\r\n```bash\r\nyo prodigious-helix:foundation\r\n```\r\n...then configure your project based on yeoman questions.\r\n\r\n## Adding TDS projects to existing Foundation\r\n\r\nExecute in the root of your existing Sitecore source code:\r\n\r\n```bash\r\nyo prodigious-helix:foundation-tds\r\n```\r\nYeoman will ask you the information of the existing project (Solution Name, Foundation Name), Sitecore database and the new TDS project alias/name you want to use. The new TDS project will be named like: ```SolutionName.Foundation.FoundationName.Alias ```\r\n\r\n\r\n## Background\r\n\r\nThis generator is based on [kamsar] yeoman [habitat generator] but this implementation is not tied to habitat project and has some extra features such as:\r\n\r\n* Allows to create new Sitecore projects following [Helix] guidelines from scratch.\r\n* Allows to create TDS projects. \r\n* Allows dynamic solution names.\r\n* Allows to select different .NET Frameworks .  \r\n\r\n\r\n[kamsar]: https://twitter.com/kamsar\r\n[habitat generator]: https://github.com/kamsar/generator-habitat/\r\n[Helix]: http://helix.sitecore.net/\r\n\r\n',
+20 silly publish   readmeFilename: 'README.md',
+20 silly publish   gitHead: '29e6fc2e89562f9f9ea2c79df46ff34f8ade6d32',
+20 silly publish   _id: 'generator-prodigious-helix@1.0.8',
+20 silly publish   scripts: {},
+20 silly publish   _shasum: '0985fe09d41f685822a3969b625479f2bb2ab8a8',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name generator-prodigious-helix
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'generator-prodigious-helix',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'generator-prodigious-helix',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/generator-prodigious-helix
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading C:\Users\mrodrigu23\AppData\Roaming\npm-cache\generator-prodigious-helix\1.0.8\package.tgz
+29 verbose stack Error: auth required for publishing
+29 verbose stack     at CachingRegistryClient.publish (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\publish.js:30:14)
+29 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\publish.js:134:14
+29 verbose stack     at mapToRegistry (C:\Program Files\nodejs\node_modules\npm\lib\utils\map-to-registry.js:62:3)
+29 verbose stack     at publish_ (C:\Program Files\nodejs\node_modules\npm\lib\publish.js:104:3)
+29 verbose stack     at Array.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+29 verbose stack     at LOOP (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+29 verbose stack     at LOOP (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:14:28)
+29 verbose stack     at chain (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+29 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\publish.js:73:5
+29 verbose stack     at RES (C:\Program Files\nodejs\node_modules\npm\node_modules\inflight\inflight.js:23:14)
+30 verbose cwd C:\Work\Yeoman\generator-prodigious-helix
+31 error Windows_NT 10.0.10586
+32 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+33 error node v4.6.0
+34 error npm  v2.15.9
+35 error code ENEEDAUTH
+36 error need auth auth required for publishing
+36 error need auth You need to authorize this machine using `npm adduser`
+37 verbose exit [ 1, true ]
