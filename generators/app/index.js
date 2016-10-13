@@ -37,6 +37,7 @@ module.exports = generators.Base.extend({
             this.props.foundationFolder = '{' + guid.v4() + '}';
             this.props.solutionFolder = '{' + guid.v4() + '}';
             this.props.tdsGuid = guid.v4();
+
         }.bind(this));
     },
     writing: function() {
@@ -64,7 +65,7 @@ module.exports = generators.Base.extend({
             }
         );
 
-        // package.json file        
+        // package.json file
         this.fs.copyTpl(
             this.templatePath('package.json'),
             this.destinationPath(path.join('package.json')), {
@@ -72,7 +73,7 @@ module.exports = generators.Base.extend({
             }
         );
 
-        // TDS Default configuration     
+        // TDS Default configuration
         this.fs.copyTpl(
             this.templatePath('TdsGlobal.config'),
             this.destinationPath(path.join('TdsGlobal.config')), {
@@ -80,7 +81,7 @@ module.exports = generators.Base.extend({
             }
         );
 
-        // Publish targets main configuration file        
+        // Publish targets main configuration file
         this.fs.copyTpl(
             this.templatePath('publishsettings.targets'),
             this.destinationPath(path.join('publishsettings.targets')), {
@@ -130,7 +131,8 @@ module.exports = generators.Base.extend({
                 solutionFolder: this.props.solutionFolder,
                 solutionName: this.props.solutionName,
                 projectGuid: this.props.projectGuid,
-                tdsGuid: this.props.tdsGuid
+                tdsGuid: this.props.tdsGuid,
+                createTdsProject: this.props.createTdsProject
             }
         );
 

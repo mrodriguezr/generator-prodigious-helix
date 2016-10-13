@@ -22,8 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "<%= solutionName %>", "<%= 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= solutionName %>.Website", "src\Project\<%= solutionName %>\code\<%= solutionName %>.Website.csproj", "<%= projectGuid %>"
 EndProject
+<% if (createTdsProject) { %>
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionName %>.Website.Master", "src\Project\<%= solutionName %>\tds\<%= solutionName %>.Website.Master\<%= solutionName %>.Website.Master.scproj", "<%= tdsGuid %>"
 EndProject
+<% } %>
 
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -43,7 +45,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		<%= solutionFolder %> = <%= projectFolder %>
-		<%= projectGuid %> = <%= solutionFolder %>		
-		<%= tdsGuid %> = <%= solutionFolder %>	
+		<%= projectGuid %> = <%= solutionFolder %>
+		<%= tdsGuid %> = <%= solutionFolder %>
 	EndGlobalSection
 EndGlobal
