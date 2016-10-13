@@ -65,7 +65,7 @@ This generator is based on [kamsar] yeoman [habitat generator] but this implemen
 * Allows to create new Sitecore projects following [Helix] guidelines from scratch.
 * Allows to create TDS projects. 
 * Allows dynamic solution names.
-* Allows to select different .NET Frameworks .  
+* Allows to select different .NET Frameworks (_under construction_).  
 
 
 [kamsar]: https://twitter.com/kamsar
