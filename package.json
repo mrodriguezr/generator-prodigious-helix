@@ -1,6 +1,6 @@
 {
     "name": "generator-prodigious-helix",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Sitecore Helix generator",
     "files": [
         "generators"
@@ -11,7 +11,7 @@
         "tds",
         "yeoman-generator"
     ],
-    "author": "melvin.rodriguez@prodigious.com",
+    "author": "mrodriguezr66@gmail.com",
     "dependencies": {
         "chalk": "^1.1.3",
         "mkdirp": "^0.5.1",
